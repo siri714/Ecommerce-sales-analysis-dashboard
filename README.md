@@ -2,16 +2,17 @@
 
 ## Project Overview
 
-Developed a 3-page business intelligence dashboard using SQL Server and Power BI to analyze e-commerce sales performance, customer behavior, regional trends, and product profitability.
+Developed a three-page business intelligence dashboard using SQL Server, DAX, and Power BI to analyze e-commerce sales performance, customer behavior, regional trends, and product profitability.
 
-The project transforms raw transactional data into actionable business insights that can support pricing decisions, customer retention strategies, inventory planning, and regional sales optimization.
+The project combines SQL-based business analysis with Power BI visualization to transform raw transactional data into actionable insights that support data-driven decision-making.
 
 ---
 
-## Tools Used
+## Tools & Technologies
 
 * SQL Server
 * Power BI
+* DAX (Data Analysis Expressions)
 * CSV Dataset (Superstore)
 
 ---
@@ -20,7 +21,10 @@ The project transforms raw transactional data into actionable business insights 
 
 ### Executive Overview
 
-* Total Sales, Profit, Orders, and Average Order Value
+* Total Sales
+* Total Profit
+* Total Orders
+* Average Order Value (AOV)
 * Sales by Region
 * Sales by Category
 * Profit by Category
@@ -30,7 +34,7 @@ The project transforms raw transactional data into actionable business insights 
 
 * Top 10 Most Profitable Customers
 * Customer Value Segmentation
-* Top Customer per Region
+* Top Customer Per Region
 
 ### Product Profitability Analysis
 
@@ -41,67 +45,94 @@ The project transforms raw transactional data into actionable business insights 
 
 ---
 
-## Key Business Insights
+## Key Business Findings
 
-### Revenue & Profitability
+### Executive Performance
 
-* Generated approximately **$2.30M in total sales** and **$286K in profit** across **5,009 orders**.
-* Average Order Value was approximately **$458.61**.
+* Analyzed 5,009 customer orders.
+* Generated approximately **$2.30M in sales** and **$286.40K in profit**.
+* Calculated an **Average Order Value (AOV) of $458.61**.
 
 ### Regional Performance
 
-* The **West region** generated the highest sales (~$730K).
-* The **South region** generated the lowest sales (~$400K), indicating potential opportunities for growth.
+* Identified the West region as the highest-performing sales region.
+* Compared sales performance across West, East, Central, and South regions to highlight regional revenue concentration and potential growth opportunities.
 
-### Category Performance
+### Category Analysis
 
-* **Technology** was the highest-performing category, generating approximately **$145K in profit**.
-* **Furniture** produced strong sales but significantly lower profit, suggesting weaker margins compared to other categories.
-* **Office Supplies** delivered consistent profitability despite lower sales volume.
+* Evaluated category-level sales and profitability.
+* Determined that strong sales volume does not always translate into strong profitability, emphasizing the importance of margin-focused analysis.
 
 ### Customer Analysis
 
-* The majority of customers (**~78%**) were classified as **Low Value** customers.
-* Only **~4%** of customers were classified as **High Value**, highlighting a small group that contributes disproportionately to business value.
-* Identified the most profitable customer in each region using SQL ranking functions.
+* Created customer segmentation logic using DAX to classify customers as:
 
-### Product Profitability
+  * High Value
+  * Mid Value
+  * Low Value
+* Found that approximately:
 
-* Several products generated over **$10K in sales while producing negative profit**, indicating potential discounting, pricing, or cost-management issues.
-* Identified the top 10 profit-generating products and the top 10 loss-generating products for further business review.
+  * 78% of customers were Low Value
+  * 18% were Mid Value
+  * 4% were High Value
+* Identified the highest-profit customer in each region using SQL window functions.
 
-### Sub-Category Insights
+### Product Profitability Analysis
 
-* **Phones** and **Copiers** emerged as major profit contributors.
-* Profitability varied significantly across sub-categories, demonstrating that high sales volume does not always translate into high profit.
+* Ranked products by total profit to identify top-performing and loss-generating products.
+* Discovered products generating over $10,000 in sales while still producing negative profit, indicating potential pricing, discounting, or cost-management issues.
+* Compared profitability across product sub-categories to identify the strongest profit contributors.
 
 ---
 
-## SQL Techniques Used
+## Technical Skills Demonstrated
 
+### SQL
+
+* Aggregate Functions (`SUM`, `COUNT`, `AVG`)
+* `GROUP BY` and `HAVING`
 * Common Table Expressions (CTEs)
-* Aggregate Functions (SUM, COUNT)
-* GROUP BY Analysis
-* HAVING Filters
-* Customer Segmentation Logic
-* Window Functions (RANK)
-* Profitability Analysis
+* Window Functions (`RANK()`)
+* Customer Segmentation Analysis
 * Regional Performance Analysis
+* Product Profitability Analysis
+* KPI Calculation
+
+### Power BI & DAX
+
+* Multi-page Dashboard Design
+* KPI Cards
+* Interactive Business Visualizations
+* Data Modeling
+* Custom DAX Calculations
+* Customer Value Classification (High / Mid / Low Value)
+* Data Aggregation and Filtering
+* Executive Reporting and Data Storytelling
+
+### Business Analytics
+
+* Revenue Analysis
+* Profitability Analysis
+* Customer Segmentation
+* Regional Performance Evaluation
+* Product Performance Assessment
+* Identification of Operational and Pricing Risks
 
 ---
 
 ## Project Outcome
 
-This project demonstrates the ability to use SQL and Power BI to move beyond reporting and uncover meaningful business insights. The analysis identifies revenue drivers, profitability risks, customer value concentration, and product-level opportunities that can support data-driven decision making.
+This project demonstrates the ability to use SQL, DAX, and Power BI to move beyond reporting and uncover actionable business insights. The analysis identifies revenue drivers, customer value concentration, regional performance patterns, and product profitability opportunities that can support strategic business decisions.
 
 ---
 
 ## Repository Structure
 
 ```text
-SQL queries/
-tables 4 PBI/
+SQL /
+Data /
 Ecommerce_Sales_Analysis.pbix
 Sample - Superstore.csv
 ```
+
 
